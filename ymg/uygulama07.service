@@ -1,0 +1,12 @@
+[Unit]
+Description=Toplama ve Çarpma işlemleri için service
+After=network.target
+
+[Service]
+Type= simple
+RestartSec=1
+ExecStart= /usr/bin/python3 /opt/uygulama07/toplama.py
+
+
+[Install]
+WantedBy=multi-user.target
